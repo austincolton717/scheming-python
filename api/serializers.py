@@ -10,5 +10,5 @@ class dataserializer(serializers.HyperlinkedModelSerializer):
 
 class pbnlistserializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = data
+        model = pbnlist
         fields = ('id', 'domain', 'built', 'builder')
