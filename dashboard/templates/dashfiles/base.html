@@ -24,7 +24,7 @@
     <div id="wrapper">
   
       <!-- Sidebar -->
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #980116;" id="accordionSidebar">
   
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
@@ -219,7 +219,7 @@
                   <div class="input-group">
                     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
+                      <button class="btn" style="color: #980116;" type="button">
                         <i class="fas fa-search fa-sm"></i>
                       </button>
                     </div>
@@ -356,7 +356,7 @@
                   Manage
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{% url 'home' %}">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
