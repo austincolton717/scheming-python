@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('frontend.urls')),
     path('api/', include('api.urls')),
+    path('apirequest/', include('apirequest.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('seodatatools/', include('seodatatools.urls')),
     path('indexautomation/', include('indexautomation.urls')),

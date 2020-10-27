@@ -1,1 +1,14 @@
 <h1>Welcome to the Archive App</h1>
+<br/>
+
+{% if api %}
+    {% if api == "Error..." %}
+        There was a problem with the request. 
+        Please Try again.
+    {% else %}
+
+        {{ api }}
+
+
+    {% endif %}
+{% endif %}
