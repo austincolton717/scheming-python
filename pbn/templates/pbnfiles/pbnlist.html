@@ -1,7 +1,39 @@
 {% extends 'dashfiles/base.html' %}
 {% block content %}
-
-<h1>Welcome to the PBN List App</h1>
+<div class="container">
+    <h1 class="text-align-center">Home Security PBN</h1>
+</div>
+<br/>
+<div class="container">
+<form method="POST" name="input_form">
+  {% csrf_token %}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <label for="domain">Enter Domain</label>
+        <input class="form-control mr-sm-2" type="text" aira-label="Domain" name="domain">
+      </div>
+      <div class="col">
+        <label for="domain">Is Pointed</label>
+        <input class="form-control mr-sm-2" type="text" aira-label="Pointed" name="pointed">
+      </div>
+      <div class="col">
+        <label for="domain">Builder Name</label>
+        <input class="form-control mr-sm-2" type="text" aira-label="Builder" name="builder">
+      </div>
+      <div class="col">
+        <label for="domain">Is Built</label>
+        <input class="form-control mr-sm-2" type="text" aira-label="Built" name="built">
+      </div>
+      <div class='col'>
+      <br/>
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add to PBN</button>
+     </div>
+    </div>
+  </div>
+</form>
+<br/>
+<br/>
 
 <table class="table table-striped">
     <thead>
@@ -16,10 +48,10 @@
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>exampleurl.com</td>
-        <td>Yes</td>
-        <td>Austin</td>
-        <td>Yes</td>
+        <td>{{ things.domain }}</td>
+        <td>{{ things.pointed }}</td>
+        <td>{{ things.builder }}</td>
+        <td>{{ things.built }}</td>
       </tr>
       <tr>
         <th scope="row">2</th>
@@ -37,6 +69,6 @@
       </tr>
     </tbody>
   </table>
-
+</div>
 {% endblock %}
 
