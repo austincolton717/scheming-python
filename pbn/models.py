@@ -7,3 +7,7 @@ class List(models.Model):
 
     def __str__(self):
         return self.item
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=100, verbose_name="full name")
