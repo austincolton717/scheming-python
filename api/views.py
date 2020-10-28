@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import data, pbnlist, pbn_url
-from .serializers import dataserializer, pbnlistserializer, pbntableserializer
+from .models import data, pbnlist, pbn_url, seowebmap
+from .serializers import dataserializer, pbnlistserializer, pbntableserializer, webmapserializer
 
 
 class projectview(viewsets.ModelViewSet):
@@ -17,3 +17,8 @@ class pbnlistview(viewsets.ModelViewSet):
 class pbntableview(viewsets.ModelViewSet):
     queryset = data.objects.all()
     serializer_class = pbntableserializer
+
+
+class webmapview(viewsets.ModelViewSet):
+    queryset = data.objects.all()
+    serializer_class = webmapserializer

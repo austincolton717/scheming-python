@@ -29,3 +29,15 @@ class pbn_url(models.Model):
 
     def __str__(self):
         return self.domain
+
+
+class seowebmap(models.Model):
+    url = models.CharField(max_length=50)
+    titletag = models.CharField(max_length=50)
+    metadescription = models.CharField(max_length=50)
+    H1 = models.CharField(max_length=50)
+    primarykw = models.CharField(max_length=50)
+    pagetype = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.url
