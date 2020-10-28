@@ -1,73 +1,36 @@
 {% extends 'dashfiles/base.html' %}
 {% block content %}
 <div class="container">
-    <h1 class="text-align-center">Home Security PBN</h1>
-</div>
-<br/>
-<div class="container">
-<form method="POST" name="input_form">
-  {% csrf_token %}
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <label for="domain">Enter Domain</label>
-        <input class="form-control mr-sm-2" type="text" aira-label="Domain" name="domain">
-      </div>
-      <div class="col">
-        <label for="domain">Is Pointed</label>
-        <input class="form-control mr-sm-2" type="text" aira-label="Pointed" name="pointed">
-      </div>
-      <div class="col">
-        <label for="domain">Builder Name</label>
-        <input class="form-control mr-sm-2" type="text" aira-label="Builder" name="builder">
-      </div>
-      <div class="col">
-        <label for="domain">Is Built</label>
-        <input class="form-control mr-sm-2" type="text" aira-label="Built" name="built">
-      </div>
-      <div class='col'>
-      <br/>
-      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add to PBN</button>
-     </div>
-    </div>
-  </div>
-</form>
-<br/>
-<br/>
+  <h2>PBN List Form Basic</h2>
 
-<table class="table table-striped">
+    <button><a href="{% url 'upload-pbn' %}">Add New PBN</a></button>
+    <br/>
+
+  <table class="table">
+    <br/>
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Domain</th>
+        <th scope="col">Domain Name</th>
         <th scope="col">Category</th>
-        <th scope="col">Site Built</th>
-        <th scope="col">Site Pointed</th>
-        <th scope="col">Index File</th>
-        <th scope="col">Builder</th>
+        <th scope="col">Status</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
+    {% for PBNsite in shelf %}
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>exampleurl.com</td>
-        <td>Business</td>
-        <td>ARGO</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Austin</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>exampleurl.com</td>
-        <td>ART</td>
-        <td>ARGO</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Brock</td>
+        <td>{{PBNsite.domain_name }}</td>
+        <td>{{PBNsite.category }}</td>
+        <td>{{PBNsite.status }}</td>
+        <td><a href="update/{{PBNsite.id}}" class="btn btn-warning" id = '{{PBNsite.id}}'>edit</a></td>
+        <td><a href="delete/{{PBNsite.id}}" class="btn btn-danger" id = '{{PBNsite.id}}'>delete</a></td>
       </tr>
     </tbody>
+    {% endfor %}
   </table>
-</div>
+  </div>
 {% endblock %}
 
