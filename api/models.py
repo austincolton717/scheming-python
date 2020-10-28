@@ -17,3 +17,15 @@ class pbnlist(models.Model):
 
     def __str__(self):
         return self.domain
+
+
+class pbn_url(models.Model):
+    domain = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+    sitebuilt = models.CharField(max_length=50)
+    pointed = models.CharField(max_length=50)
+    indexfile = models.CharField(max_length=50)
+    builder = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.domain
