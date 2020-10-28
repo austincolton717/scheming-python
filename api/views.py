@@ -15,10 +15,10 @@ class pbnlistview(viewsets.ModelViewSet):
 
 
 class pbntableview(viewsets.ModelViewSet):
-    queryset = data.objects.all()
+    queryset = pbn_url.objects.all()
     serializer_class = pbntableserializer
 
 
 class webmapview(viewsets.ModelViewSet):
-    queryset = data.objects.all()
+    queryset = seowebmap.objects.all()
     serializer_class = webmapserializer

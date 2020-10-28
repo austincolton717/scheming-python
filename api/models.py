@@ -32,12 +32,12 @@ class pbn_url(models.Model):
 
 
 class seowebmap(models.Model):
-    url = models.CharField(max_length=50)
-    titletag = models.CharField(max_length=50)
-    metadescription = models.CharField(max_length=50)
-    H1 = models.CharField(max_length=50)
-    primarykw = models.CharField(max_length=50)
-    pagetype = models.CharField(max_length=50)
+    url = models.CharField(max_length=100)
+    title_tag = models.CharField(max_length=60)
+    meta_description = models.CharField(max_length=160)
+    H1 = models.CharField(max_length=100)
+    primary_kw = models.CharField(max_length=50)
+    page_type = models.CharField(max_length=50)
 
     def __str__(self):
         return self.url
