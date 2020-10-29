@@ -11,6 +11,10 @@ def indexautomation(request):
     return render(request, 'automationfiles/indexautomation.html', {})
 
 
+def data_automation(request):
+    return render(request, 'automationfiles/data-automation.html', {})
+
+
 def indexChecker(request):
     if request.method == 'POST' and request.POST['input_list']:
         text_object = request.POST['input_list']

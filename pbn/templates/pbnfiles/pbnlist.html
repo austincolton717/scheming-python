@@ -3,8 +3,7 @@
 <div class="container">
   <h2>URL File Manager</h2>
   <p>Keep track of all of your urls, the account information, DNS server documentation, and more!</p>
-
-    <button><a href="{% url 'upload-pbn' %}">Add New PBN</a></button>
+  <a class="btn btn-primary" href="{% url 'upload-pbn' %}" role="button">Add New URL</a>
     <br/>
 
   <table class="table">
@@ -26,8 +25,8 @@
         <td>{{PBNsite.domain_name }}</td>
         <td>{{PBNsite.category }}</td>
         <td>{{PBNsite.status }}</td>
-        <td><a href="update/{{PBNsite.id}}" class="btn btn-warning" id = '{{PBNsite.id}}'>edit</a></td>
-        <td><a href="delete/{{PBNsite.id}}" class="btn btn-danger" id = '{{PBNsite.id}}'>delete</a></td>
+        <td><a href="update/{{PBNsite.id}}" class="btn btn-outline-info" id = '{{PBNsite.id}}'>edit</a></td>
+        <td><a href="delete/{{PBNsite.id}}" class="btn btn-outline-danger" id = '{{PBNsite.id}}'>delete</a></td>
       </tr>
     </tbody>
     {% endfor %}
