@@ -31,7 +31,7 @@
           <!-- <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-chart-area"></i>
           </div> -->
-          <div class="sidebar-brand-text mx-3">Opendoor SEO<sup></sup></div>
+          <div class="sidebar-brand-text mx-3">Opendoor SEO Dashboard<sup></sup></div>
         </a>
   
         <!-- Divider -->
@@ -51,123 +51,55 @@
         <div class="sidebar-heading">
           SEO Data Manager
         </div>
-  
-        <!-- Nav Item - Pages Collapse Menu -->
+
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>SEO Data Tools</span>
-          </a>
-          <div id="collapseTools" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Google Index Automation</h6>
-              <a class="collapse-item" href="#">SEO Webmap</a>
-              <a class="collapse-item" href="#">Keyword Tracker</a>
-              <a class="collapse-item" href="#">Keyword Explorer</a>
-              <a class="collapse-item" href="#">Site Explorer</a>
-              <a class="collapse-item" href="#">Site Traffic</a>
-              <a class="collapse-item" href="#">Ranking Info</a>
-              <a class="collapse-item" href="#">Site Speed & Audit</a>
-              <a class="collapse-item" href="#">Linkbuilder Tools</a>
-            </div>
-          </div>
+          <a class="nav-link" href="{% url 'seodatatools' %}">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>SEO TOOLS</span></a>
         </li>
 
-  
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cogs"></i>
-            <span>Index Automation</span>
-          </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Google Index Automation</h6>
-              <a class="collapse-item" href="{% url 'indexchecker' %}">Rapid Index Verification</a>
-              <a class="collapse-item" href="#">Bulk Index Verification</a>
-              <a class="collapse-item" href="#">Link Scraping</a>
-              <a class="collapse-item" href="#">Rank Verification</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePBN" aria-expanded="true" aria-controls="collapsePBN">
-            <i class="fas fa-fw fa-table"></i>
-            <span>PBN Tools</span>
-          </a>
-          <div id="collapsePBN" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">PBN Site Manager</h6>
-              <a class="collapse-item" href="#">Cloudboss</a>
-              <a class="collapse-item" href="#">Name Silo</a>
-              <a class="collapse-item" href="#">Expired Domains</a>
-              <a class="collapse-item" href="{% url 'pbnlist' %}">PBN URL List</a>
-            </div>
-          </div>
-        </li>
-
-  
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-  
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Work Management Tools
-        </div>
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Work Management</span>
-          </a>
-          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Project Management Tools</h6>
-              <a class="collapse-item" href="#">Subscription Manager</a>
-              <a class="collapse-item" href="#">Account Manager</a>
-              <a class="collapse-item" href="#">Project Manager</a>
-              <a class="collapse-item" href="#">Resource Manager</a>
-              <a class="collapse-item" href="#">Shoebox</a>
-            </div>
-          </div>
-        </li>
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-search"></i>
-            <span>Client Tools</span>
-          </a>
-          <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Client Dashboard</h6>
-              <a class="collapse-item" href="#">Time Tracker</a>
-            <a class="collapse-item" href="#">Email Manager</a>  
-            <a class="collapse-item" href="#">Client Manager</a>
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Billing</h6>
-              <a class="collapse-item" href="#">Transactions</a>
-              <a class="collapse-item" href="#">Statements</a>
-              <a class="collapse-item" href="#">Invoice</a>
-            </div>
-          </div>
-        </li>
-  
-        <!-- Nav Item - Charts -->
         <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Knowledge Base</span></a>
+            <span>PROJECTS</span></a>
         </li>
-  
-        <!-- Nav Item - Tables -->
+
         <li class="nav-item">
           <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Dashboard Settings</span></a>
+            <i class="fas fa-fw fa-folder"></i>
+            <span>DATA AUTOMATION</span></a>
         </li>
-  
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>CLIENT TOOLS</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'pbnlist' %}">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>URL FILE MANAGER</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>ARCHIVE</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'apirequest' %}"> 
+            <i class="fas fa-fw fa-folder"></i>
+            <span>OPENDOOR API</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>SETTINGS</span></a>
+        </li>
+        
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
   
@@ -193,17 +125,6 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
-          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form> -->
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
