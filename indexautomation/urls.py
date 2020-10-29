@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.indexautomation, name="indexautomation"),
+    path('indexchecker/', views.indexChecker, name="indexchecker"),
 ]
