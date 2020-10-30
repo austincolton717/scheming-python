@@ -74,7 +74,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
- 
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
