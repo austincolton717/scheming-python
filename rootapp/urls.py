@@ -12,7 +12,7 @@ urlpatterns = [
     path('seodatatools/', include('seodatatools.urls')),
     path('indexautomation/', include('indexautomation.urls')),
     path('pbn/', include('pbn.urls')),
-    path('workmanagement/', include('workmanagement.urls')),
+    path('projects/', include('workmanagement.urls')),
     path('clientmanager/', include('clientmanager.urls')),
     path('archive/', include('archive.urls')),
     path('livepreview/', include('livepreview.urls')),
