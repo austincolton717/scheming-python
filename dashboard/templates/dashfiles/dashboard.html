@@ -143,33 +143,43 @@
               <h6 class="m-0 font-weight-bold text-primary">PROJECTS</h6>
               </div>
                 <div class="card-body">
-                  <button type="button" class="btn btn-outline-dark" href="https://schemingpython.herokuapp.com/projects/upload/">Add New</button>
+                  <a class="btn btn-primary" href="{% url 'upload-project' %}" role="button">Create New Project</a>
                   <div class="row">
                     <div class="col-sm-12">
                       <br/>
                       <div class="card">
                         <div class="card-body">
-                          <p>Project Domain Information </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <br/>
-                      <div class="card">
-                        <div class="card-body">
-                          <p>Project Domain Information </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <br/>
-                      <div class="card">
-                        <div class="card-body">
-                          <p>Project Domain Information </p>
+                          <table class="table">
+                            <br/>
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Open Project</th>
+                                <th scope="col">Project Name</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Project Manager</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                              </tr>
+                            </thead>
+                            {% for seoProject in projectshelf %}
+                            <tbody>
+                              <tr>
+                                <th scope="row">{{seoProject.id}}</th>
+                                <td><a href="project-info/{{seoProject.id}}" class="btn btn-outline-info" id = '{{seoProject.id}}'>open</a></td>
+                                <td>{{ seoProject.project_name }}</td>
+                                <td>{{ seoProject.project_type }}</td>
+                                <td>{{ seoProject.project_manager }}</td>
+                                <td>{{ seoProject.client }}</td>
+                                <td>{{ seoProject.status }}</td>
+                                <td><a href="update/{{seoProject.id}}" class="btn btn-outline-info" id = '{{seoProject.id}}'>edit</a></td>
+                                <td><a href="delete/{{seoProject.id}}" class="btn btn-outline-danger" id = '{{seoProject.id}}'>delete</a></td>
+                              </tr>
+                            </tbody>
+                            {% endfor %}
+                          </table>
                         </div>
                       </div>
                     </div>
