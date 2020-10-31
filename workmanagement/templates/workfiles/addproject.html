@@ -1,0 +1,27 @@
+{% extends 'dashfiles/base.html' %}
+{% block content %}
+
+
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Create New Project</h6>
+        </div>
+          <div class="card-body">
+                <form method = 'POST' enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {% for field in addproject %}
+                        <tr>
+                            <th>{{field.label}}</th>
+                            <td>{{ field }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <br/>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+          </div>
+
+{% endblock %}
