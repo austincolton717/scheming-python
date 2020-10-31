@@ -4,8 +4,8 @@ from .forms import newProject
 from django.http import HttpResponse
 
 
-def workManagement(request):
-    return render(request, 'workfiles/workmanagement.html', {})
+# def workManagement(request):
+#     return render(request, 'workfiles/workmanagement.html', {})
 
 
 def projects(request):
