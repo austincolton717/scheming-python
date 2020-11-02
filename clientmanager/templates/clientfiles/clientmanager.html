@@ -1,7 +1,49 @@
 {% extends 'dashfiles/base.html' %}
 {% block content %}
 
-<h1>Welcome to the Client Manager App</h1>
+<div class="container">
+    <h2>Client Manager</h2>
+    <p>Keep track of your Clients, Tasks, and Projects</p>
+    <a class="btn btn-primary" href="{% url 'upload-client' %}" role="button">Add New Client</a>
+      <br/>
+  
+    <table class="table">
+      <br/>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">City and Zip</th>
+          <th scope="col">Project Type</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Billing Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">Amount Invoiced</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      {% for seoProject in projectshelf %}
+      <tbody>
+        <tr>
+          <th scope="row">{{clientData.id}}</th>
+          <td>{{ clientData.name }}</td>
+          <td>{{ clientData.address }}</td>
+          <td>{{ clientData.cityZip }}</td>
+          <td>{{ clientData.project_type }}</td>
+          <td>{{ clientData.project_start }}</td>
+          <td>{{ clientData.billing_date }}</td>
+          <td>{{ clientData.status }}</td>
+          <td>{{ clientData.amount_invoiced }}</td>
+          <td><a href="update/{{clientData.id}}" class="btn btn-outline-info" id = '{{clientData.id}}'>edit</a></td>
+          <td><a href="delete/{{clientData.id}}" class="btn btn-outline-danger" id = '{{clientData.id}}'>delete</a></td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+    
+    </div>
 
 
 {% endblock %}
